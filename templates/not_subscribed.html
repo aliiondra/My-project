@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripción Inactiva - MY-PROJECT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Colores basados en el logo de MY-PROJECT */
+            --primary: #4979C0;         /* Azul principal del logo */
+            --primary-dark: #2A5898;    /* Azul oscuro */
+            --primary-light: #EBF2FF;   /* Azul claro */
+            --secondary: #F0A830;       /* Naranja-ámbar para contraste */
+            --secondary-dark: #D98C23;  /* Naranja oscuro */
+            --secondary-light: #FFEFD4; /* Naranja claro */
+            --accent: #3E6AB0;          /* Azul intermedio para acentos */
+            --accent-hover: #5584C7;    /* Azul medio claro para hover */
+            --tertiary: #B0C9F2;        /* Azul pálido para fondos suaves */
+            --success: #36B37E;         /* Verde para éxito */
+            --warning: #FBBF24;         /* Amarillo para alertas */
+            --info: #64B5F6;            /* Azul informativo */
+            --text-dark: #122550;       /* Azul oscuro/negro para textos */
+            --gray-50: #F9FAFB;         /* Fondo muy claro */
+            --gray-100: #F3F4F6;        /* Fondo claro */
+            --gray-200: #E5E7EB;        /* Bordes, separadores */
+            --gray-300: #D1D5DB;        /* Bordes destacados */
+            --gray-400: #9CA3AF;        /* Textos deshabilitados */
+            --gray-500: #6B7280;        /* Textos secundarios */
+            --gray-600: #4B5563;        /* Textos de nivel medio */
+            --gray-700: #374151;        /* Textos primarios */
+            --gray-800: #1F2937;        /* Textos destacados */
+            --gray-900: #111827;        /* Textos muy destacados */
+            
+            /* Sombras */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.15);
+            --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.25);
+            
+            /* Border radius */
+            --radius-sm: 0.25rem;
+            --radius: 0.5rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            --radius-2xl: 2rem;
+            --radius-full: 9999px;
+            
+            /* Espaciado */
+            --spacing-1: 0.25rem;
+            --spacing-2: 0.5rem;
+            --spacing-3: 0.75rem;
+            --spacing-4: 1rem;
+            --spacing-5: 1.25rem;
+            --spacing-6: 1.5rem;
+            --spacing-8: 2rem;
+            --spacing-10: 2.5rem;
+            --spacing-12: 3rem;
+            --spacing-16: 4rem;
+            --spacing-20: 5rem;
+            --spacing-24: 6rem;
+            
+            /* Fuentes */
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-heading: 'Montserrat', sans-serif;
+        }
+        
+        /* Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            color: var(--gray-700);
+            background-color: var(--gray-50);
+            line-height: 1.65;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            background: linear-gradient(135deg, var(--primary-light), rgba(255, 255, 255, 0.8));
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%234979C0' fill-opacity='0.05'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+            z-index: -1;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.25;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .subscription-alert {
+            color: var(--secondary-dark);
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        a:hover {
+            color: var(--primary-dark);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .success-box {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            position: relative;
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .success-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+        }
+        
+        .success-header {
+            background: linear-gradient(135deg, var(--primary-light), white);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            position: relative;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .success-header h1 {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+        
+        .success-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 25%;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--primary), transparent);
+            border-radius: var(--radius);
+        }
+        
+        .success-icon {
+            width: 90px;
+            height: 90px;
+            background-color: var(--warning);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            box-shadow: var(--shadow-md);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(251, 191, 36, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); }
+        }
+        
+        .success-icon svg {
+            width: 45px;
+            height: 45px;
+            color: white;
+        }
+        
+        .success-content {
+            padding: 2.5rem;
+        }
+        
+        .success-message {
+            background-color: var(--secondary-light);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--secondary);
+            box-shadow: var(--shadow-sm);
+            font-size: 1.05rem;
+        }
+        
+        .success-message p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .next-steps {
+            margin-bottom: 2rem;
+        }
+        
+        .next-steps h3 {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.25rem;
+            font-size: 1.35rem;
+        }
+        
+        .next-steps h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), transparent);
+            border-radius: var(--radius);
+        }
+        
+        .next-steps ol {
+            padding-left: 1.5rem;
+            counter-reset: steps-counter;
+            list-style: none;
+        }
+        
+        .next-steps li {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 2rem;
+            counter-increment: steps-counter;
+        }
+        
+        .next-steps li::before {
+            content: counter(steps-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+            font-family: var(--font-heading);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+            font-family: var(--font-sans);
+            text-align: center;
+            box-shadow: var(--shadow);
+            flex: 1;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+            z-index: -1;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            background-image: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            box-shadow: 0 6px 15px rgba(73, 121, 192, 0.4);
+            transform: translateY(-2px);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+            box-shadow: 0 5px 15px rgba(240, 168, 48, 0.3);
+            background-image: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(240, 168, 48, 0.4);
+            color: white;
+        }
+        
+        .support-info {
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--gray-600);
+            padding-top: 1rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .support-info a {
+            font-weight: 500;
+        }
+        
+        .support-info a:hover {
+            color: var(--primary-dark);
+        }
+        
+        /* Media queries */
+        @media (max-width: 768px) {
+            .success-header {
+                padding: 2rem 1.5rem;
+            }
+            
+            .success-content {
+                padding: 1.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            html {
+                font-size: 14px;
+            }
+            
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            .success-icon {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .success-icon svg {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .success-content {
+                padding: 1.25rem;
+            }
+            
+            .success-message {
+                padding: 1.25rem;
+            }
+            
+            .next-steps li {
+                padding-left: 1.75rem;
+            }
+            
+            .next-steps li::before {
+                width: 22px;
+                height: 22px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-box">
+            <div class="success-header">
+                <div class="success-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                </div>
+                <h1>Acceso limitado</h1>
+            </div>
+            
+            <div class="success-content">
+                <div class="success-message">
+                    <p class="subscription-alert">Vaya, parece que no tienes una subscripción activa, pulsa aquí para ver los planes</p>
+                    <p>Para acceder a todo el contenido y funcionalidades de MY-PROJECT, necesitas una suscripción activa. Explora nuestros planes y elige el que mejor se adapte a tus necesidades de preparación.</p>
+                </div>
+                
+                <div class="next-steps">
+                    <h3>Beneficios de suscripción</h3>
+                    <ol>
+                        <li>Acceso completo a todos los materiales de estudio.</li>
+                        <li>Exámenes y pruebas de práctica ilimitados.</li>
+                        <li>Seguimiento personalizado de tu progreso.</li>
+                    </ol>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#" onclick="window.location.href=window.location.origin + '/home' + '#pricing'" class="btn btn-primary">
+                        Ver planes de suscripción
+                    </a>
+                </div>
+                
+                <div class="support-info">
+                    <p>¿Necesitas ayuda? <a href="mailto:soporte@my-project.com">Contacta con nuestro equipo de soporte</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
